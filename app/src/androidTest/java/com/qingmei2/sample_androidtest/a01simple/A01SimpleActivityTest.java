@@ -1,9 +1,10 @@
-package com.qingmei2.sample_androidtest;
+package com.qingmei2.sample_androidtest.a01simple;
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
+import com.qingmei2.sample_androidtest.R;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,6 +20,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
 
 /**
@@ -35,8 +37,8 @@ public class A01SimpleActivityTest {
     @Test
     public void clickTest() {
         //tvContent是否默认不显示
-        onView(withId(R.id.tv_content))
-                .check(matches(not(isDisplayed())));
+        onView(ViewMatchers.withId(R.id.tv_content))
+                .check(matches(not(isDisplayed())));    //是否不可见
 
         //检查btn01的text，然后执行点击事件
         onView(withId(R.id.btn01))
@@ -66,7 +68,8 @@ public class A01SimpleActivityTest {
                 .check(matches(isDisplayed()));
 
         onView(withId(R.id.et_01))
-                .check(matches(withText("")))
-                .check(matches(withHint("请输入账户名")));
+                .check(matches(withText("")))           //内容是否为""
+                .check(matches(withHint("请输入账户名")))         //hint内容是否为"请输入账户名"
+                .check(matches(withHint(containsString("账户名"))));       //hint内容是否包含"账户名"
     }
 }

@@ -1,8 +1,6 @@
-package com.qingmei2.sample_androidtest;
+package com.qingmei2.sample_androidtest.a02async;
 
 import android.support.test.rule.ActivityTestRule;
-
-import com.qingmei2.sample_androidtest.a02async.A02AsyncActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
