@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest;
+package com.qingmei2.sample_androidtest.a01simple;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.qingmei2.sample_androidtest.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class A01MainActivity extends AppCompatActivity {
+public class A01SimpleActivity extends AppCompatActivity {
 
     @BindView(R.id.btn01)
     Button btn01;

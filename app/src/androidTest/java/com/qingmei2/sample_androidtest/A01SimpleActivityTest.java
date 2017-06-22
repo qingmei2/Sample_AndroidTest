@@ -3,7 +3,8 @@ package com.qingmei2.sample_androidtest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import org.hamcrest.Matcher;
+import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,10 +23,10 @@ import static org.hamcrest.Matchers.not;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class A01MainActivityTest {
+public class A01SimpleActivityTest {
 
     @Rule
-    public ActivityTestRule<A01MainActivity> rule = new ActivityTestRule<A01MainActivity>(A01MainActivity.class);
+    public ActivityTestRule<A01SimpleActivity> rule = new ActivityTestRule<>(A01SimpleActivity.class);
 
     @Test
     public void clickTest() {
