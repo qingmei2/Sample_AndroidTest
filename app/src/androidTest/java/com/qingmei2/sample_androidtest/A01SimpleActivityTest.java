@@ -10,9 +10,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withHint;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.not;
@@ -43,5 +47,26 @@ public class A01SimpleActivityTest {
         onView(withId(R.id.tv_content))
                 .check(matches(withText("hello espresso!")))
                 .check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void loginTest() throws Exception {
+        //先清除editText的内容，然后输入，然后关闭软键盘，最后校验内容
+        onView(withId(R.id.et_01))
+                .perform(clearText(), typeText("username"), closeSoftKeyboard())
+                .check(matches(withText("username")));
+
+        //点击登录
+        onView(withId(R.id.btn02))
+                .perform(click());
+
+        //校验内容
+        onView(withId(R.id.tv_content))
+                .check(matches(withText("success")))
+                .check(matches(isDisplayed()));
+
+        onView(withId(R.id.et_01))
+                .check(matches(withText("")))
+                .check(matches(withHint("请输入账户名")));
     }
 }

@@ -26,6 +26,20 @@
             android:layout_height="wrap_content"
             android:visibility="gone" />
 
+        <EditText
+            android:id="@+id/et_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入账户名"
+            android:text="123456"
+            />
+
+        <Button
+            android:id="@+id/btn02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
