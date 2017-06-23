@@ -12,6 +12,8 @@ import com.qingmei2.sample_androidtest.R;
 import com.qingmei2.sample_androidtest.a02async.A02AsyncActivity;
 import com.qingmei2.sample_androidtest.a03list.A03ListActivity;
 import com.qingmei2.sample_androidtest.a04rotate.A04RotateActivity;
+import com.qingmei2.sample_androidtest.a05toolbar.A05ToolbarActivity;
+import com.qingmei2.sample_androidtest.a06_async_dialog_fragment.A06AsyncActivity2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +42,6 @@ public class A00IndexActivity extends AppCompatActivity {
      * espresso-web：包含支持WebView的资源。
      * espresso-idling-resource：Espresso同步后台工作的机制。
      * espresso-contrib：外部支持（External contributions）包含日期选择器、 RecyclerView和绘制动作、断言检查、CountingIdlingResource。
-     *
      */
 
     @Override
@@ -50,7 +51,7 @@ public class A00IndexActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_01, R.id.btn_02, R.id.btn_03, R.id.btn_04, R.id.btn_05})
+    @OnClick({R.id.btn_01, R.id.btn_02, R.id.btn_03, R.id.btn_04, R.id.btn_05, R.id.btn_06, R.id.btn_07, R.id.btn_08})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_01:
@@ -66,6 +67,14 @@ public class A00IndexActivity extends AppCompatActivity {
                 startActivity(new Intent(this, A04RotateActivity.class));
                 break;
             case R.id.btn_05:
+                startActivity(new Intent(this, A05ToolbarActivity.class));
+                break;
+            case R.id.btn_06:
+                startActivity(new Intent(this, A06AsyncActivity2.class));
+                break;
+            case R.id.btn_07:
+                break;
+            case R.id.btn_08:
                 break;
         }
     }
