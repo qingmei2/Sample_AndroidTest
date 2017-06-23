@@ -2,12 +2,14 @@ package com.qingmei2.sample_androidtest.a03list;
 
 import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
 
 import com.qingmei2.sample_androidtest.R;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -21,7 +23,7 @@ import static org.hamcrest.Matchers.not;
  * Created by QingMei on 2017/6/23.
  * desc:
  */
-
+@RunWith(AndroidJUnit4.class)
 public class A03ListActivityTest {
 
     @Rule

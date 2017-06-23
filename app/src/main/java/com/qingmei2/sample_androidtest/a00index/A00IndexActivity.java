@@ -35,6 +35,14 @@ public class A00IndexActivity extends AppCompatActivity {
     @BindView(R.id.btn_05)
     Button btn05;
 
+    /**
+     * espresso-core：包括核心和基础的View匹配器、动作、断言。详见Basics和 Advanced Samples。
+     * espresso-web：包含支持WebView的资源。
+     * espresso-idling-resource：Espresso同步后台工作的机制。
+     * espresso-contrib：外部支持（External contributions）包含日期选择器、 RecyclerView和绘制动作、断言检查、CountingIdlingResource。
+     *
+     */
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

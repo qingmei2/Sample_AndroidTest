@@ -14,7 +14,7 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.action.ViewActions.replaceText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withHint;
@@ -54,9 +54,10 @@ public class A01SimpleActivityTest {
     @Test
     public void loginTest() throws Exception {
         //先清除editText的内容，然后输入，然后关闭软键盘，最后校验内容
+        //这里如果要输入中文，使用replaceText()方法代替typeText()
         onView(withId(R.id.et_01))
-                .perform(clearText(), typeText("username"), closeSoftKeyboard())
-                .check(matches(withText("username")));
+                .perform(clearText(), replaceText("你好 username"), closeSoftKeyboard())
+                .check(matches(withText("你好 username")));
 
         //点击登录
         onView(withId(R.id.btn02))

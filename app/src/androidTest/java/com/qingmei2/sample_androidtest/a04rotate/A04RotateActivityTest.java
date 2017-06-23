@@ -5,12 +5,14 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
 
 import com.qingmei2.sample_androidtest.R;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -23,7 +25,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
  * desc:屏幕旋转处理test类
  * {@link A04RotateActivity}
  */
-
+@RunWith(AndroidJUnit4.class)
 public class A04RotateActivityTest {
 
     @Rule
