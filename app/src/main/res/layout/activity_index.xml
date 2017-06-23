@@ -26,7 +26,7 @@
         android:id="@+id/btn_04"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="espresso 简单使用" />
+        android:text="espresso 屏幕旋转处理" />
 
     <Button
         android:id="@+id/btn_05"

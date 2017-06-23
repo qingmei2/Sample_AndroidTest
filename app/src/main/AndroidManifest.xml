@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".a01simple.A01SimpleActivity" />
         <activity android:name=".a02async.A02AsyncActivity" />
-        <activity android:name=".a03list.A03ListActivity"></activity>
+        <activity android:name=".a03list.A03ListActivity" />
+        <activity android:name=".a04rotate.A04RotateActivity"></activity>
     </application>
 
 </manifest>
