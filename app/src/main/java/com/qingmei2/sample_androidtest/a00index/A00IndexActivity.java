@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
 import com.qingmei2.sample_androidtest.R;
+import com.qingmei2.sample_androidtest.a02async.A02AsyncActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,6 +47,7 @@ public class A00IndexActivity extends AppCompatActivity {
                 startActivity(new Intent(this, A01SimpleActivity.class));
                 break;
             case R.id.btn_02:
+                startActivity(new Intent(this, A02AsyncActivity.class));
                 break;
             case R.id.btn_03:
                 break;
