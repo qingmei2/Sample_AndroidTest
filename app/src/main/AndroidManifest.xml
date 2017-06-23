@@ -11,7 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".a00index.A00IndexActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,21 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".a01simple.A01SimpleActivity" />
-
-        <activity android:name=".a02async.A02AsyncActivity" />
-
+        <activity android:name=".a02_async_glide.A02AsyncActivity" />
         <activity android:name=".a03list.A03ListActivity" />
-
         <activity android:name=".a04rotate.A04RotateActivity" />
-
         <activity
             android:name=".a05toolbar.A05ToolbarActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
         <activity android:name=".a06_async_dialog_fragment.A06AsyncActivity2" />
-
+        <activity android:name=".a07_async_okhttp.A07OkhttpActivity"/>
     </application>
 
 </manifest>

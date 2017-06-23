@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a02async;
+package com.qingmei2.sample_androidtest.a02_async_glide;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;

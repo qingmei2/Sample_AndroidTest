@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a02async;
+package com.qingmei2.sample_androidtest.a02_async_glide;
 
 import android.support.test.espresso.IdlingResource;
 import android.widget.ImageView;

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
 import com.qingmei2.sample_androidtest.R;
-import com.qingmei2.sample_androidtest.a02async.A02AsyncActivity;
+import com.qingmei2.sample_androidtest.a02_async_glide.A02AsyncActivity;
 import com.qingmei2.sample_androidtest.a03list.A03ListActivity;
 import com.qingmei2.sample_androidtest.a04rotate.A04RotateActivity;
 import com.qingmei2.sample_androidtest.a05toolbar.A05ToolbarActivity;
