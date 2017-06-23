@@ -20,7 +20,7 @@
         android:id="@+id/btn_03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="espresso 简单使用" />
+        android:text="espresso recyclerView使用" />
 
     <Button
         android:id="@+id/btn_04"
