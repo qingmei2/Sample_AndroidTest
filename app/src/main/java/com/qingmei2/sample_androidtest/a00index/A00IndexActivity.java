@@ -14,6 +14,7 @@ import com.qingmei2.sample_androidtest.a03list.A03ListActivity;
 import com.qingmei2.sample_androidtest.a04rotate.A04RotateActivity;
 import com.qingmei2.sample_androidtest.a05toolbar.A05ToolbarActivity;
 import com.qingmei2.sample_androidtest.a06_async_dialog_fragment.A06AsyncActivity2;
+import com.qingmei2.sample_androidtest.a07_async_okhttp.A07OkhttpActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -73,6 +74,7 @@ public class A00IndexActivity extends AppCompatActivity {
                 startActivity(new Intent(this, A06AsyncActivity2.class));
                 break;
             case R.id.btn_07:
+                startActivity(new Intent(this, A07OkhttpActivity.class));
                 break;
             case R.id.btn_08:
                 break;

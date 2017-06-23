@@ -33,7 +33,7 @@ public class A07OkhttpActivityTest {
         Espresso.registerIdlingResources(idlingResource);
 
         onView(withId(R.id.tv_name))
-                .check(matches(withText("清梅")));
+                .check(matches(withText("qingmei2")));
 
         //解除注册
         Espresso.unregisterIdlingResources(idlingResource);
