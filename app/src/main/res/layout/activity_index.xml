@@ -52,7 +52,7 @@
         android:id="@+id/btn_08"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="espresso 异步请求4" />
+        android:text="espresso+Dagger2实现自动化测试" />
 
 
 </LinearLayout>

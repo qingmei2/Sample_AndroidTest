@@ -5,6 +5,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 public abstract class OkHttpProvider {
+
     private static OkHttpClient instance = null;
 
     public static OkHttpClient getOkHttpInstance() {

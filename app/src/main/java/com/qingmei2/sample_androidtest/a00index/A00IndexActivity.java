@@ -7,14 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
 import com.qingmei2.sample_androidtest.R;
+import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
 import com.qingmei2.sample_androidtest.a02_async_glide.A02AsyncActivity;
 import com.qingmei2.sample_androidtest.a03list.A03ListActivity;
 import com.qingmei2.sample_androidtest.a04rotate.A04RotateActivity;
 import com.qingmei2.sample_androidtest.a05toolbar.A05ToolbarActivity;
 import com.qingmei2.sample_androidtest.a06_async_dialog_fragment.A06AsyncActivity2;
 import com.qingmei2.sample_androidtest.a07_async_okhttp.A07OkhttpActivity;
+import com.qingmei2.sample_androidtest.a08_async_dagger2.A08Dagger2Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -77,6 +78,7 @@ public class A00IndexActivity extends AppCompatActivity {
                 startActivity(new Intent(this, A07OkhttpActivity.class));
                 break;
             case R.id.btn_08:
+                startActivity(new Intent(this, A08Dagger2Activity.class));
                 break;
         }
     }
