@@ -3,8 +3,6 @@ package com.qingmei2.sample_androidtest.a08_async_dagger2.di;
 import com.qingmei2.sample_androidtest.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.a08_async_dagger2.api.GitHubServiceManager;
 
-import java.util.concurrent.TimeUnit;
-
 import rx.Observable;
 
 /**
@@ -19,6 +17,7 @@ class MockGitHubServiceManager extends GitHubServiceManager {
         User user1 = new User();
         user1.login = user;
         //延迟三秒
-        return Observable.just(user1).delay(3, TimeUnit.SECONDS);
+//        return Observable.just(user1).delay(3, TimeUnit.SECONDS);
+        return Observable.just(user1);
     }
 }
