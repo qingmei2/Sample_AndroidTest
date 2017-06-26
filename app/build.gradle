@@ -21,7 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        testInstrumentationRunner "com.qingmei2.sample_androidtest.a08_async_dagger2.ServiceTestRunner"
+        testInstrumentationRunner "com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.ServiceTestRunner"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

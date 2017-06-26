@@ -7,4 +7,4 @@
     android:layout_gravity="center_horizontal"
     android:textSize="40sp"
     android:text="loading"
-    tools:context=".a06_async_dialog_fragment.A06AsyncActivity2"/>
+    tools:context=".a_espresso.a06_async_dialog_fragment.A06AsyncActivity2"/>

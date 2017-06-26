@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.qingmei2.sample_androidtest.a07_async_okhttp.A07OkhttpActivity">
+    tools:context=".a_espresso.a07_async_okhttp.A07OkhttpActivity">
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -17,6 +17,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".a07_async_okhttp.A07OkhttpActivity" />
+        tools:context=".a_espresso.a07_async_okhttp.A07OkhttpActivity" />
 
 </android.support.constraint.ConstraintLayout>

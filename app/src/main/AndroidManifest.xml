@@ -8,27 +8,30 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".a08_async_dagger2.MyApplication"
+        android:name=".a_espresso.a08_async_dagger2.MyApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".a00_index.A00IndexActivity">
+
+        <activity android:name=".a_espresso.a00_index.A00IndexActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".a01_simple.A01SimpleActivity" />
-        <activity android:name=".a02_async_glide.A02AsyncActivity" />
-        <activity android:name=".a03_list.A03ListActivity" />
-        <activity android:name=".a04_rotate.A04RotateActivity" />
+        <activity android:name=".a_espresso.a01_simple.A01SimpleActivity" />
+        <activity android:name=".a_espresso.a02_async_glide.A02AsyncActivity" />
+        <activity android:name=".a_espresso.a03_list.A03ListActivity" />
+        <activity android:name=".a_espresso.a04_rotate.A04RotateActivity" />
         <activity
-            android:name=".a05_toolbar.A05ToolbarActivity"
+            android:name=".a_espresso.a05_toolbar.A05ToolbarActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".a06_async_dialog_fragment.A06AsyncActivity2" />
-        <activity android:name=".a07_async_okhttp.A07OkhttpActivity" />
-        <activity android:name=".a08_async_dagger2.A08Dagger2Activity"/>
+        <activity android:name=".a_espresso.a06_async_dialog_fragment.A06AsyncActivity2" />
+        <activity android:name=".a_espresso.a07_async_okhttp.A07OkhttpActivity" />
+        <activity android:name=".a_espresso.a08_async_dagger2.A08Dagger2Activity"/>
+
+        <activity android:name=".b_mockito.B00IndexActivity"/>
     </application>
 
 </manifest>
