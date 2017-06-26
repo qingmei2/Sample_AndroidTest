@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a05toolbar;
+package com.qingmei2.sample_androidtest.a05_toolbar;
 
 import android.support.test.espresso.matcher.BoundedMatcher;
 import android.support.test.rule.ActivityTestRule;

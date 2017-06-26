@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity">
+    tools:context="com.qingmei2.sample_androidtest.a01_simple.A01SimpleActivity">
 
     <LinearLayout
         android:layout_width="0dp"

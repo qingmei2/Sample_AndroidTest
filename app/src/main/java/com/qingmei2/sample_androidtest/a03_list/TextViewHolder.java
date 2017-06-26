@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a03list;
+package com.qingmei2.sample_androidtest.a03_list;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

@@ -6,7 +6,7 @@
     android:layout_gravity="center"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".a04rotate.A04RotateActivity">
+    tools:context=".a04_rotate.A04RotateActivity">
 
     <TextView
         android:id="@+id/count"

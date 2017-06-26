@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a03list;
+package com.qingmei2.sample_androidtest.a03_list;
 
 import android.graphics.Color;
 import android.os.Bundle;

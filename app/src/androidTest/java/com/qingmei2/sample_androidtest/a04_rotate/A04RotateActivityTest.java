@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a04rotate;
+package com.qingmei2.sample_androidtest.a04_rotate;
 
 import android.content.Context;
 import android.content.pm.ActivityInfo;

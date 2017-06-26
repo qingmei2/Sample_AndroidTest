@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a05toolbar;
+package com.qingmei2.sample_androidtest.a05_toolbar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

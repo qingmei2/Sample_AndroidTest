@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a00index;
+package com.qingmei2.sample_androidtest.a00_index;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qingmei2.sample_androidtest.R;
-import com.qingmei2.sample_androidtest.a01simple.A01SimpleActivity;
+import com.qingmei2.sample_androidtest.a01_simple.A01SimpleActivity;
 import com.qingmei2.sample_androidtest.a02_async_glide.A02AsyncActivity;
-import com.qingmei2.sample_androidtest.a03list.A03ListActivity;
-import com.qingmei2.sample_androidtest.a04rotate.A04RotateActivity;
-import com.qingmei2.sample_androidtest.a05toolbar.A05ToolbarActivity;
+import com.qingmei2.sample_androidtest.a03_list.A03ListActivity;
+import com.qingmei2.sample_androidtest.a04_rotate.A04RotateActivity;
+import com.qingmei2.sample_androidtest.a05_toolbar.A05ToolbarActivity;
 import com.qingmei2.sample_androidtest.a06_async_dialog_fragment.A06AsyncActivity2;
 import com.qingmei2.sample_androidtest.a07_async_okhttp.A07OkhttpActivity;
 import com.qingmei2.sample_androidtest.a08_async_dagger2.A08Dagger2Activity;

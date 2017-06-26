@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a01simple;
+package com.qingmei2.sample_androidtest.a01_simple;
 
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;

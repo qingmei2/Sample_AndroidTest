@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a01simple;
+package com.qingmei2.sample_androidtest.a01_simple;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

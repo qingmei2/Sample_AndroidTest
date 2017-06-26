@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".a03list.A03ListActivity">
+    tools:context=".a03_list.A03ListActivity">
   <ListView
       android:id="@+id/list"
       android:layout_width="match_parent"

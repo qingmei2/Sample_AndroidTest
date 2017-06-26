@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.a04rotate;
+package com.qingmei2.sample_androidtest.a04_rotate;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
