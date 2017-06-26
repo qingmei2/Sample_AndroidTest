@@ -19,7 +19,7 @@
 | a08_async_dagger2            | how to use the Dagger2+Rx in developing| dagger2&retrofit&rxjava&espresso |
 
 
-## The Sample_AndroidTest License 
+## License 
 
 > Copyright (c) 2017 qingmei2
 > 
