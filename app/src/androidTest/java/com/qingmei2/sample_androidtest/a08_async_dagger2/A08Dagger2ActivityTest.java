@@ -3,9 +3,9 @@ package com.qingmei2.sample_androidtest.a08_async_dagger2;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.util.Log;
 
 import com.qingmei2.sample_androidtest.R;
-import com.qingmei2.sample_androidtest.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.a08_async_dagger2.api.GitHubServiceManager;
 import com.qingmei2.sample_androidtest.a08_async_dagger2.di.TestApplication;
 
@@ -38,8 +38,6 @@ public class A08Dagger2ActivityTest {
     @Inject
     GitHubServiceManager serviceManager;
 
-    private User user;
-
     private static final String USERNAME = "qingmei2";
 
     @Before
@@ -51,13 +49,19 @@ public class A08Dagger2ActivityTest {
     public void daggerTest() throws Exception {
         serviceManager.getUser(USERNAME)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(user -> this.user = user);
-//        Thread.sleep(4000);
+                .subscribe(user -> {
+                            //serviceManager = com.qingmei2.sample_androidtest.a08_async_dagger2.di.MockGitHubServiceManager@xxxxxx
+                            //user = User(login=qingmei2, name=null)
+                            //说明Dagger2依赖注入使用Mock数据成功
+                            Log.i("tag", "serviceManager = " + serviceManager.toString());
+                            Log.i("tag", "user = " + user.toString());
+                            rule.getActivity().showData(user.getLogin());
+                        }
+                );
 
         onView(withId(R.id.btn_http)).perform(click());
 
-        onView(withId(R.id.tv_name)).check(matches(withText(user.getName())));
-        Thread.sleep(4000);
-
+        //查看是否匹配
+        onView(withId(R.id.tv_name)).check(matches(withText(USERNAME)));
     }
 }
