@@ -34,6 +34,8 @@
         <activity android:name=".b_mockito.B00IndexActivity"/>
         <activity android:name=".b_mockito.b01simple.B01SimpleActivity"/>
 
+        <activity android:name=".m_mvp.mvp.UserActivity"/>
+
     </application>
 
 </manifest>

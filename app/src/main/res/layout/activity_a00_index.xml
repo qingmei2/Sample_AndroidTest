@@ -61,5 +61,11 @@
         android:layout_height="wrap_content"
         android:text="Lv2-Mockito library" />
 
+    <Button
+        android:id="@+id/btn_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVP开发单元测试" />
+
 
 </LinearLayout>
