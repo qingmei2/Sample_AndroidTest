@@ -28,7 +28,7 @@ public class UserPresenterTest {
 
     @Before
     public void setUp() throws Exception {
-        RxUnitTestTools.openRxTools();
+        RxUnitTestTools.asyncToSync();
 
         view = mock(UserContract.UserView.class);
 

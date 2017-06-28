@@ -1,11 +1,15 @@
 package com.qingmei2.sample_androidtest.b_mockito.b01_simple;
 
+import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.b_mockito.b01simple.MVPContract;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentMatcher;
+import org.mockito.InOrder;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,10 +20,12 @@ import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
 /**
@@ -33,6 +39,7 @@ public class B01SimpleActivityTest {
 
     @Before
     public void setUp() throws Exception {
+        MockitoAnnotations.initMocks(this);
         //mock creation
         mockList = mock(ArrayList.class);
     }
@@ -104,9 +111,14 @@ public class B01SimpleActivityTest {
         }
     }
 
+    /**
+     * 我们也可以测试方法调用的次数
+     * https://static.javadoc.io/org.mockito/mockito-core/2.8.9/org/mockito/Mockito.html#exact_verification
+     *
+     * @throws Exception
+     */
     @Test
     public void simpleTest4() throws Exception {
-        //我们也可以测试方法调用的次数
         mockList.add("once");
 
         mockList.add("twice");
@@ -132,6 +144,10 @@ public class B01SimpleActivityTest {
 //        verify(mockList, atLeast(2)).add("five times"); //这行代码不会通过
     }
 
+    /**
+     * 异常抛出测试
+     * https://static.javadoc.io/org.mockito/mockito-core/2.8.9/org/mockito/Mockito.html#stubbing_with_exceptions
+     */
     @Test
     public void throwTest5() {
         doThrow(new NullPointerException("throwTest5.抛出空指针异常")).when(mockList).clear();
@@ -140,5 +156,105 @@ public class B01SimpleActivityTest {
         mockList.add("string");
         mockList.add(12);
         mockList.clear();
+    }
+
+    /**
+     * 验证执行执行顺序
+     * https://static.javadoc.io/org.mockito/mockito-core/2.8.9/org/mockito/Mockito.html#in_order_verification
+     *
+     * @throws Exception
+     */
+    @Test
+    public void orderTest6() throws Exception {
+        List singleMock = mock(List.class);
+
+        singleMock.add("first add");
+        singleMock.add("second add");
+
+        InOrder inOrder = inOrder(singleMock);
+
+        //inOrder保证了方法的顺序执行
+        inOrder.verify(singleMock).add("first add");
+        inOrder.verify(singleMock).add("second add");
+
+        List firstMock = mock(List.class);
+        List secondMock = mock(List.class);
+
+        firstMock.add("first add");
+        secondMock.add("second add");
+
+        InOrder inOrder1 = inOrder(firstMock, secondMock);
+
+        //下列代码会确认是否firstmock优先secondMock执行add方法
+        inOrder1.verify(firstMock).add("first add");
+        inOrder1.verify(secondMock).add("second add");
+    }
+
+    /**
+     * 确保mock对象从未进行过交互
+     * https://static.javadoc.io/org.mockito/mockito-core/2.8.9/org/mockito/Mockito.html#never_verification
+     *
+     * @throws Exception
+     */
+    @Test
+    public void noInteractedTest7() throws Exception {
+        List firstMock = mock(List.class);
+        List secondMock = mock(List.class);
+        List thirdMock = mock(List.class);
+
+        firstMock.add("one");
+
+        verify(firstMock).add("one");
+
+        verify(firstMock, never()).add("two");
+
+        firstMock.add(thirdMock);
+        // 确保交互(interaction)操作不会执行在mock对象上
+//        verifyZeroInteractions(firstMock); //test failed,因为firstMock和其他mock对象有交互
+        verifyZeroInteractions(secondMock, thirdMock);   //test pass
+    }
+
+
+    /**
+     * 简化mock对象的创建,请注意，一旦使用@Mock注解，一定要在测试方法调用之前调用(比如@Before注解的setUp方法)
+     * MockitoAnnotations.initMocks(testClass);
+     */
+    @Mock
+    List mockedList;
+    @Mock
+    User mockedUser;
+
+    @Test
+    public void initMockTest8() throws Exception {
+        mockedList.add("123");
+        mockedUser.setLogin("qingmei2");
+    }
+
+    /**
+     * 方法连续调用的测试
+     * https://static.javadoc.io/org.mockito/mockito-core/2.8.9/org/mockito/Mockito.html#stubbing_consecutive_calls
+     */
+    @Test
+    public void continueMethodTest9() throws Exception {
+        when(mockedUser.getName())
+                .thenReturn("qingmei2")
+                .thenThrow(new RuntimeException("方法调用第二次抛出异常"))
+                .thenReturn("qingemi2 第三次调用");
+
+        //另外一种方式
+        when(mockedUser.getName()).thenReturn("qingmei2 1","qingmei2 2","qingmei2 3");
+
+        String name1 = mockedUser.getName();
+
+        try {
+            String name2 = mockedUser.getName();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        String name3 = mockedUser.getName();
+
+        System.out.println(name1);
+        System.out.println(name3);
     }
 }
