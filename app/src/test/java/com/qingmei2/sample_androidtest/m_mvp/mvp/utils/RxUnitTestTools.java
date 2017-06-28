@@ -38,7 +38,7 @@ public class RxUnitTestTools {
             }
         };
 
-        // reset()不是必要，实践中发现不写reset()，偶尔会出错，所以写上保险^_^
+        // reset()不是必要，实践中发现不写reset()，偶尔会出错，所以写上保险
         RxAndroidPlugins.getInstance().reset();
         RxAndroidPlugins.getInstance().registerSchedulersHook(rxAndroidSchedulersHook);
         RxJavaPlugins.getInstance().reset();

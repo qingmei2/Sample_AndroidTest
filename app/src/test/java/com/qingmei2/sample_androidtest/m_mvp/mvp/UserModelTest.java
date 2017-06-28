@@ -1,5 +1,6 @@
 package com.qingmei2.sample_androidtest.m_mvp.mvp;
 
+import com.annimon.stream.Optional;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.m_mvp.api.UserService;
 import com.qingmei2.sample_androidtest.m_mvp.mvp.utils.MockRetrofitHelper;
@@ -27,13 +28,16 @@ public class UserModelTest {
 
     @Test
     public void fileReaderTest() throws Exception {
-        System.out.print(AssestsReader.readFile("/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/z_json_file/userJson"));
+        Optional.ofNullable("/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/api/userJson")
+                .map(AssestsReader::readFile)
+                .ifPresentOrElse(System.out::println,
+                        ()-> System.out.println("file read failed"));
     }
 
     @Test
-    public void loadUserInfo() throws Exception {
+    public void loadUserInfoTest() throws Exception {
         //文件直接采用了绝对路径，请根据个人项目中文件的绝对路径进行设置
-        retrofitHelper.setPath("/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/z_json_file/userJson");
+        retrofitHelper.setPath("/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/api/userJson");
 
         User user = userService.getRxUser("qingmei2")
                 .toBlocking()

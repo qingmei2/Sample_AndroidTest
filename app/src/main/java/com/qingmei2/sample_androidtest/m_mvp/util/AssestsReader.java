@@ -25,11 +25,11 @@ public class AssestsReader {
     /**
      * 文件转换为字符串
      *
-     * @param f             文件
+     * @param f 文件
      * @param charset 文件的字符集
      * @return 文件内容
      */
-    public static String file2String(File f, String charset) {
+    private static String file2String(File f, String charset) {
         String result = null;
         try {
             result = stream2String(new FileInputStream(f), charset);
@@ -42,11 +42,11 @@ public class AssestsReader {
     /**
      * 文件转换为字符串
      *
-     * @param in            字节流
+     * @param in    字节流
      * @param charset 文件的字符集
      * @return 文件内容
      */
-    public static String stream2String(InputStream in, String charset) {
+    private static String stream2String(InputStream in, String charset) {
         StringBuffer sb = new StringBuffer();
         try {
             Reader r = new InputStreamReader(in, charset);
