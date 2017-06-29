@@ -22,4 +22,5 @@ public class UserModelImpl implements UserContract.UserModel {
     public Observable<User> loadUserInfo(String userName) {
         return serviceManager.getUserInfo(userName);
     }
+
 }

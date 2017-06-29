@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.b_mockito.b01simple;
+package com.qingmei2.sample_androidtest.b_mockito;
 
 /**
  * Created by QingMei on 2017/6/26.

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.qingmei2.sample_androidtest.R;
-import com.qingmei2.sample_androidtest.b_mockito.b01simple.B01SimpleActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

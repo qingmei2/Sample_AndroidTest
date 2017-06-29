@@ -1,7 +1,6 @@
-package com.qingmei2.sample_androidtest.b_mockito.b01_simple;
+package com.qingmei2.sample_androidtest.b_mockito;
 
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
-import com.qingmei2.sample_androidtest.b_mockito.b01simple.MVPContract;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -30,10 +29,10 @@ import static org.mockito.Mockito.when;
 
 /**
  * Created by QingMei on 2017/6/26.
- * desc:
+ * desc:Mockito基础API  一
  */
 
-public class B01SimpleActivityTest {
+public class B01SimpleTest {
 
     private ArrayList mockList;
 
@@ -83,7 +82,6 @@ public class B01SimpleActivityTest {
 //        when(mockList.addAll(argThat(list -> list.size() == 3))).thenReturn(true);
         //我们不要使用太严格的参数Matcher，也许下面会更好
 //        when(mockList.addAll(argThat(notNull()));
-
 
         boolean b1 = mockList.addAll(Arrays.asList("one", "two"));
         boolean b2 = mockList.addAll(Arrays.asList("one", "two", "three"));
@@ -242,7 +240,7 @@ public class B01SimpleActivityTest {
                 .thenReturn("qingemi2 第三次调用");
 
         //另外一种方式
-        when(mockedUser.getName()).thenReturn("qingmei2 1","qingmei2 2","qingmei2 3");
+        when(mockedUser.getName()).thenReturn("qingmei2 1", "qingmei2 2", "qingmei2 3");
 
         String name1 = mockedUser.getName();
 

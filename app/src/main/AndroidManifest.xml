@@ -32,7 +32,7 @@
         <activity android:name=".a_espresso.a08_async_dagger2.A08Dagger2Activity"/>
 
         <activity android:name=".b_mockito.B00IndexActivity"/>
-        <activity android:name=".b_mockito.b01simple.B01SimpleActivity"/>
+        <activity android:name=".b_mockito.B01SimpleActivity"/>
 
         <activity android:name=".m_mvp.mvp.UserActivity"/>
 
