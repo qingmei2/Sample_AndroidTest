@@ -1,7 +1,5 @@
 package com.qingmei2.sample_androidtest;
 
-import com.qingmei2.sample_androidtest.m_mvp.util.AssestsReader;
-
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
