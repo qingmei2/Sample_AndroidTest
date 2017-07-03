@@ -6,7 +6,7 @@
 
 ### chapter A - espresso
 
-| packageName           | desc                                          | library |
+| packageName(androidTest)           | desc                                          | library |
 | -------------         |:-------------:                                | -----:|
 | a00_index              | the index of espresso instructions list       | espresso |
 | a01_simple             | hello, espresso !                             |   espresso |
@@ -17,6 +17,22 @@
 | a06_async_dialog_fragment    | fragment asynchronous request          | espresso |
 | a07_async_okhttp             | asynchronous request with okhttp       |   okhttp&espresso |
 | a08_async_dagger2            | how to use the Dagger2+Rx in developing| dagger2&retrofit&rxjava&espresso |
+
+### chapter B - mockito
+
+| packageName (test)         | desc                                          | library |
+| -------------              |:-------------:                                | -----:|
+| b01SimpleTest              | mockito base API                               | mockito |
+| b02SimpleTest              | mockito base API                              |   mockito |
+
+### chapter C - robolectric(ing...)
+
+| packageName (test)         | desc                                          | library |
+| -------------              |:-------------:                                | -----:|
+| c00download                | how to fastly download dependence             | robolectric |
+
+### chapter M - MVP+androidTest+Rx+Dagger(ing...)
+
 
 
 ## License 
