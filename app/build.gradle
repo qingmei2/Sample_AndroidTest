@@ -74,6 +74,8 @@ dependencies {
     //mockito
     testCompile "org.mockito:mockito-core:2.8.9"
     androidTestCompile "org.mockito:mockito-android:2.8.9"
+    //robolectric
+    testCompile "org.robolectric:robolectric:3.3.2"
     //android support
     compile "com.android.support:appcompat-v7:${SUPPORT_VERSION}"
     compile "com.android.support:design:${SUPPORT_VERSION}"
