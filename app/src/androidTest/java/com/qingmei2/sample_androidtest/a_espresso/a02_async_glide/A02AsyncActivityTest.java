@@ -1,6 +1,5 @@
 package com.qingmei2.sample_androidtest.a_espresso.a02_async_glide;
 
-import android.support.test.espresso.Espresso;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.widget.ImageView;
@@ -41,15 +40,14 @@ public class A02AsyncActivityTest {
     @Test
     public void loadImage() throws Exception {
 
+        onView(withId(R.id.imageView))
+                .check(matches(isClickable()));
+
         //点击按钮，加载图片
         onView(withId(R.id.btn01))
                 .perform(click());
 
-        onView(withId(R.id.imageView))
-                .check(matches(isClickable()));
-//                .check(matches(not(isClickable())));
-
-        Espresso.registerIdlingResources(a02IdlingResource);//只有图片加载成功才执行后面的代码
+//        Espresso.registerIdlingResources(a02IdlingResource);//只有图片加载成功才执行后面的代码
 
         onView(withId(R.id.imageView))
                 .check(matches(not(isClickable())));
