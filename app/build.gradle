@@ -58,6 +58,9 @@ dependencies {
         exclude module: 'design'
         exclude module: 'recyclerview-v7'
     }
+    compile("com.android.support.test.espresso:espresso-idling-resource:${ESPRESSO_VERSION}") {
+        exclude module: 'support-annotations'
+    }
     androidTestCompile("com.android.support.test.espresso:espresso-idling-resource:${ESPRESSO_VERSION}") {
         exclude module: 'support-annotations'
     }

@@ -3,6 +3,8 @@ package com.qingmei2.sample_androidtest.a_espresso.a02_async_glide;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
+import android.support.test.espresso.IdlingResource;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +16,7 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.qingmei2.sample_androidtest.R;
+import com.qingmei2.sample_androidtest.a_espresso.util.EspressoIdlingResource;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,14 +38,15 @@ public class A02AsyncActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a02_async);
         ButterKnife.bind(this);
-        imageView.setClickable(true);
     }
 
     @OnClick(R.id.btn01)
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn01:
-                imageView.setTag(R.id.indexTag, IMAGE_LOAD_START);
+                //意味着开始了异步
+                EspressoIdlingResource.increment();
+
                 Glide.with(this)
                         .load("http://imgsrc.baidu.com/imgad/pic/item/caef76094b36acaf0accebde76d98d1001e99ce7.jpg")
                         .listener(new RequestListener<Drawable>() {
@@ -53,14 +57,20 @@ public class A02AsyncActivity extends AppCompatActivity {
 
                             @Override
                             public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                                System.out.println("图片加载成功！");
-                                //加载完毕后，将App设置成空闲状态
-                                imageView.setClickable(false);
-                                imageView.setTag(R.id.indexTag, IMAGE_LOAD_FINISH);
+                                btn01.setText("success!");
+                                //图片加载成功，结束异步
+                                if (!EspressoIdlingResource.getIdlingResource().isIdleNow()) {
+                                    EspressoIdlingResource.decrement();
+                                }
                                 return false;
                             }
                         }).into(imageView);
                 break;
         }
+    }
+
+    @VisibleForTesting
+    public IdlingResource getCountingIdlingResource() {
+        return EspressoIdlingResource.getIdlingResource();
     }
 }
