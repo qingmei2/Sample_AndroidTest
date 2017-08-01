@@ -17,6 +17,7 @@ import com.qingmei2.sample_androidtest.a_espresso.a06_async_dialog_fragment.A06A
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.A07OkhttpActivity;
 import com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.A08Dagger2Activity;
 import com.qingmei2.sample_androidtest.b_mockito.B00IndexActivity;
+import com.qingmei2.sample_androidtest.c_robolectric.C01Activity;
 import com.qingmei2.sample_androidtest.m_mvp.mvp.UserActivity;
 
 import butterknife.BindView;
@@ -55,7 +56,8 @@ public class A00IndexActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_01, R.id.btn_02, R.id.btn_03, R.id.btn_04, R.id.btn_05, R.id.btn_06, R.id.btn_07, R.id.btn_08, R.id.btn_09, R.id.btn_10})
+    @OnClick({R.id.btn_01, R.id.btn_02, R.id.btn_03, R.id.btn_04, R.id.btn_05,
+            R.id.btn_06, R.id.btn_07, R.id.btn_08, R.id.btn_09, R.id.btn_10,R.id.btn_11})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_01:
@@ -87,6 +89,9 @@ public class A00IndexActivity extends AppCompatActivity {
                 break;
             case R.id.btn_10:
                 startActivity(new Intent(this, UserActivity.class));
+                break;
+            case R.id.btn_11:
+                startActivity(new Intent(this, C01Activity.class));
                 break;
         }
     }

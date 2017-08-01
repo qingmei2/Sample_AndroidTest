@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".a_espresso.a01_simple.A01SimpleActivity" />
         <activity android:name=".a_espresso.a02_async_glide.A02AsyncActivity" />
         <activity android:name=".a_espresso.a03_list.A03ListActivity" />
@@ -34,8 +35,10 @@
         <activity android:name=".b_mockito.B00IndexActivity"/>
         <activity android:name=".b_mockito.B01SimpleActivity"/>
 
-        <activity android:name=".m_mvp.mvp.UserActivity"/>
+        <activity android:name=".c_robolectric.C01Activity"
+            android:label="C01Activity"/>
 
+        <activity android:name=".m_mvp.mvp.UserActivity"/>
     </application>
 
 </manifest>

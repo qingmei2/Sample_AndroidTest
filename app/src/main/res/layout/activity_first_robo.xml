@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello Robolectric!" />
+
+    <CheckBox
+        android:id="@+id/cb_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_control_cb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="controlCb"
+        android:text="反选checkBox" />
+
+    <Button
+        android:id="@+id/btn_alert_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alertDialog"
+        android:text="弹出dialog" />
+
+</LinearLayout>
