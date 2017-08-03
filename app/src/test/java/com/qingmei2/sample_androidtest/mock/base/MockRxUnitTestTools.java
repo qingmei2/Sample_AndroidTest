@@ -12,7 +12,7 @@ import rx.schedulers.Schedulers;
  * desc:
  */
 
-public class RxUnitTestTools {
+public class MockRxUnitTestTools {
 
     /**
      * 把异步变成同步，方便测试

@@ -5,7 +5,7 @@ package com.qingmei2.sample_androidtest.mock.base;
  * desc:
  */
 
-public interface Assets {
+public interface MockAssets {
 
     String BASE_PATH = "/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/mock";
 

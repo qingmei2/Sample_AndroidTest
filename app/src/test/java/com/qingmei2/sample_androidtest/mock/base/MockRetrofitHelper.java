@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.mock.utils;
+package com.qingmei2.sample_androidtest.mock.base;
 
 import java.io.IOException;
 
@@ -43,7 +43,7 @@ public class MockRetrofitHelper {
         @Override
         public Response intercept(Chain chain) throws IOException {
             // 模拟网络数据
-            String content = AssestsReader.readFile(path);
+            String content = MockAssestsReader.readFile(path);
 
             ResponseBody body = ResponseBody.create(MediaType.parse("application/x-www-form-urlencoded"), content);
 

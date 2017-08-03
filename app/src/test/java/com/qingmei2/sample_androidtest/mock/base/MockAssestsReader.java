@@ -14,7 +14,7 @@ import java.io.UnsupportedEncodingException;
  * desc:
  */
 
-public class AssestsReader {
+public class MockAssestsReader {
 
     public static String readFile(String path) {
         File file = new File(path);

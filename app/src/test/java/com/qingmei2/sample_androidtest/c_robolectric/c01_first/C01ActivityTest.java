@@ -8,7 +8,7 @@ import android.widget.CheckBox;
 import com.qingmei2.sample_androidtest.BuildConfig;
 import com.qingmei2.sample_androidtest.R;
 import com.qingmei2.sample_androidtest.c_robolectric.C01Activity;
-import com.qingmei2.sample_androidtest.c_robolectric.c00_download.MyRobolectricTestRunner;
+import com.qingmei2.sample_androidtest.c_robolectric.c00_base.BaseTestTestRunner;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +27,7 @@ import static junit.framework.Assert.assertTrue;
  * Created by QingMei on 2017/8/1.
  * desc:{@see http://www.jianshu.com/p/9d988a2f8ff7}
  */
-@RunWith(MyRobolectricTestRunner.class)
+@RunWith(BaseTestTestRunner.class)
 @Config(constants = BuildConfig.class)
 public class C01ActivityTest {
 
@@ -89,6 +89,7 @@ public class C01ActivityTest {
     @Test
     public void testResource() throws Exception {
         Application application = RuntimeEnvironment.application;
+        System.out.print(application.toString());
         String app_name = application.getString(R.string.app_name);
         assertEquals("Sample_AndroidTest", app_name);
     }

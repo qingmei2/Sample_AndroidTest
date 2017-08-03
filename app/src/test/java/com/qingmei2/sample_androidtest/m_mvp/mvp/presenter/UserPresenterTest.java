@@ -1,8 +1,13 @@
-package com.qingmei2.sample_androidtest.m_mvp.mvp;
+package com.qingmei2.sample_androidtest.m_mvp.mvp.presenter;
 
+import com.google.gson.Gson;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.m_mvp.api.UserServiceManager;
-import com.qingmei2.sample_androidtest.mock.base.RxUnitTestTools;
+import com.qingmei2.sample_androidtest.m_mvp.mvp.UserContract;
+import com.qingmei2.sample_androidtest.m_mvp.mvp.UserModelImpl;
+import com.qingmei2.sample_androidtest.m_mvp.mvp.UserPresenterIpml;
+import com.qingmei2.sample_androidtest.mock.base.MockAssestsReader;
+import com.qingmei2.sample_androidtest.mock.base.MockRxUnitTestTools;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,6 +16,7 @@ import org.mockito.ArgumentCaptor;
 
 import rx.Observable;
 
+import static com.qingmei2.sample_androidtest.mock.base.MockAssets.USER_JSON;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -28,7 +34,7 @@ public class UserPresenterTest {
 
     @Before
     public void setUp() throws Exception {
-        RxUnitTestTools.asyncToSync();
+        MockRxUnitTestTools.asyncToSync();
 
         view = mock(UserContract.UserView.class);
 
@@ -40,9 +46,7 @@ public class UserPresenterTest {
 
     @Test
     public void loadUserInfoTest() throws Exception {
-        User user = new User();
-        user.setLogin("qingmei2");
-        user.setName("青梅");
+        User user = new Gson().fromJson(MockAssestsReader.readFile(USER_JSON), User.class);
 
         when(model.loadUserInfo(anyString())).thenReturn(Observable.just(user));
 

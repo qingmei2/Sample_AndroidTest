@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.m_mvp.mvp;
+package com.qingmei2.sample_androidtest.m_mvp.mvp.model;
 
 import com.annimon.stream.Optional;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
