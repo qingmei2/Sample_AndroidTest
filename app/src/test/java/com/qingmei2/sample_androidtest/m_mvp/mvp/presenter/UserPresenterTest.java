@@ -2,7 +2,7 @@ package com.qingmei2.sample_androidtest.m_mvp.mvp;
 
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.m_mvp.api.UserServiceManager;
-import com.qingmei2.sample_androidtest.m_mvp.mvp.utils.RxUnitTestTools;
+import com.qingmei2.sample_androidtest.mock.base.RxUnitTestTools;
 
 import org.junit.Assert;
 import org.junit.Before;

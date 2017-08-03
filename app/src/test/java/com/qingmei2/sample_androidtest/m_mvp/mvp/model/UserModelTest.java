@@ -3,8 +3,9 @@ package com.qingmei2.sample_androidtest.m_mvp.mvp;
 import com.annimon.stream.Optional;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.m_mvp.api.UserService;
-import com.qingmei2.sample_androidtest.m_mvp.mvp.utils.MockRetrofitHelper;
-import com.qingmei2.sample_androidtest.m_mvp.util.AssestsReader;
+import com.qingmei2.sample_androidtest.mock.base.MockAssets;
+import com.qingmei2.sample_androidtest.mock.base.MockRetrofitHelper;
+import com.qingmei2.sample_androidtest.mock.base.MockAssestsReader;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,8 +29,8 @@ public class UserModelTest {
 
     @Test
     public void fileReaderTest() throws Exception {
-        Optional.ofNullable("/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/api/userJson")
-                .map(AssestsReader::readFile)
+        Optional.ofNullable(MockAssets.USER_JSON)
+                .map(MockAssestsReader::readFile)
                 .ifPresentOrElse(System.out::println,
                         ()-> System.out.println("file read failed"));
     }
@@ -37,7 +38,7 @@ public class UserModelTest {
     @Test
     public void loadUserInfoTest() throws Exception {
         //文件直接采用了绝对路径，请根据个人项目中文件的绝对路径进行设置
-        retrofitHelper.setPath("/Users/fcn-mq/Documents/MyProject/Sample_AndroidTest/app/src/test/java/com/qingmei2/sample_androidtest/api/userJson");
+        retrofitHelper.setPath(MockAssets.USER_JSON);
 
         User user = userService.getRxUser("qingmei2")
                 .toBlocking()

@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.m_mvp.mvp.utils;
+package com.qingmei2.sample_androidtest.mock.base;
 
 import rx.Scheduler;
 import rx.android.plugins.RxAndroidPlugins;

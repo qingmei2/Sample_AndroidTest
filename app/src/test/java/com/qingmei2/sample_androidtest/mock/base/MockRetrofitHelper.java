@@ -1,6 +1,4 @@
-package com.qingmei2.sample_androidtest.m_mvp.mvp.utils;
-
-import com.qingmei2.sample_androidtest.m_mvp.util.AssestsReader;
+package com.qingmei2.sample_androidtest.mock.utils;
 
 import java.io.IOException;
 
@@ -53,6 +51,7 @@ public class MockRetrofitHelper {
                     .protocol(Protocol.HTTP_1_1)
                     .code(200)
                     .body(body)
+                    .message("message")
                     .build();
             return response;
         }

@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.m_mvp.util;
+package com.qingmei2.sample_androidtest.mock.base;
 
 import java.io.File;
 import java.io.FileInputStream;
