@@ -30,6 +30,7 @@
 | packageName (test)         | desc                                          | library |
 | -------------              |:-------------:                                | -----:|
 | c00download                | how to fastly download dependence             | robolectric |
+| c01first                   | hello Robolectric!                            | robolectric |
 
 ### chapter M - MVP+androidTest+Rx+Dagger(ing...)
 
