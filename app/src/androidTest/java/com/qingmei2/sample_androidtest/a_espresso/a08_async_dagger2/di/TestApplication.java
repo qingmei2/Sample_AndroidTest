@@ -1,6 +1,6 @@
 package com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.di;
 
-import com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.MyApplication;
+import com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.BaseApplication;
 
 
 /**
@@ -8,7 +8,7 @@ import com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.MyApplicatio
  * desc:
  */
 
-public class TestApplication extends MyApplication {
+public class TestApplication extends BaseApplication {
 
     private TestAppComponent testAppComponent;
 

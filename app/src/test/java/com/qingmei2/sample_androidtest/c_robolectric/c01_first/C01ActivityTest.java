@@ -94,5 +94,4 @@ public class C01ActivityTest {
         assertEquals("Sample_AndroidTest", app_name);
     }
 
-
 }

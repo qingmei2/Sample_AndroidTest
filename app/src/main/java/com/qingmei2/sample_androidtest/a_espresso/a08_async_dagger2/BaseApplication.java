@@ -12,7 +12,7 @@ import com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.di.DaggerApp
  * desc:
  */
 
-public class MyApplication extends Application {
+public class BaseApplication extends Application {
 
     @Override
     public void onCreate() {
