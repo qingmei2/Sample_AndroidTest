@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.mock.base;
+package com.qingmei2.sample_androidtest.base.mocks;
 
 import java.io.IOException;
 

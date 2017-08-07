@@ -1,11 +1,11 @@
-package com.qingmei2.sample_androidtest.m_mvp.mvp.model;
+package com.qingmei2.sample_androidtest.m_mvp.model;
 
 import com.annimon.stream.Optional;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
 import com.qingmei2.sample_androidtest.m_mvp.api.UserService;
-import com.qingmei2.sample_androidtest.mock.base.MockAssets;
-import com.qingmei2.sample_androidtest.mock.base.MockRetrofitHelper;
-import com.qingmei2.sample_androidtest.mock.base.MockAssestsReader;
+import com.qingmei2.sample_androidtest.base.mocks.MockAssets;
+import com.qingmei2.sample_androidtest.base.mocks.MockRetrofitHelper;
+import com.qingmei2.sample_androidtest.base.mocks.MockAssestsReader;
 
 import org.junit.Assert;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.m_mvp.mvp.presenter;
+package com.qingmei2.sample_androidtest.m_mvp.presenter;
 
 import com.google.gson.Gson;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
@@ -6,8 +6,8 @@ import com.qingmei2.sample_androidtest.m_mvp.api.UserServiceManager;
 import com.qingmei2.sample_androidtest.m_mvp.mvp.UserContract;
 import com.qingmei2.sample_androidtest.m_mvp.mvp.UserModelImpl;
 import com.qingmei2.sample_androidtest.m_mvp.mvp.UserPresenterIpml;
-import com.qingmei2.sample_androidtest.mock.base.MockAssestsReader;
-import com.qingmei2.sample_androidtest.mock.base.MockRxUnitTestTools;
+import com.qingmei2.sample_androidtest.base.mocks.MockAssestsReader;
+import com.qingmei2.sample_androidtest.base.mocks.MockRxUnitTestTools;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -16,7 +16,7 @@ import org.mockito.ArgumentCaptor;
 
 import rx.Observable;
 
-import static com.qingmei2.sample_androidtest.mock.base.MockAssets.USER_JSON;
+import static com.qingmei2.sample_androidtest.base.mocks.MockAssets.USER_JSON;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
