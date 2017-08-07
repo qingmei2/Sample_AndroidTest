@@ -1,7 +1,7 @@
 package com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.di;
 
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
-import com.qingmei2.sample_androidtest.api.GitHubServiceManager;
+import com.qingmei2.sample_androidtest.normal.GitHubServiceManager;
 
 import rx.Observable;
 

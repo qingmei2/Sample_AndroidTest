@@ -6,7 +6,7 @@ import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
 
 import com.qingmei2.sample_androidtest.R;
-import com.qingmei2.sample_androidtest.api.GitHubServiceManager;
+import com.qingmei2.sample_androidtest.normal.GitHubServiceManager;
 import com.qingmei2.sample_androidtest.a_espresso.a08_async_dagger2.di.TestApplication;
 
 import org.junit.Before;

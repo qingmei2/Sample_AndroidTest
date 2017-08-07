@@ -1,4 +1,4 @@
-package com.qingmei2.sample_androidtest.api;
+package com.qingmei2.sample_androidtest.normal;
 
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.GitHubService;
 import com.qingmei2.sample_androidtest.a_espresso.a07_async_okhttp.User;
